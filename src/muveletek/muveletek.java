@@ -49,6 +49,7 @@ public class muveletek extends javax.swing.JFrame {
         txtFeladat = new javax.swing.JLabel();
         eredmeny = new javax.swing.JTextField();
         btnEllenorzes = new javax.swing.JButton();
+        txtStart = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuFajl = new javax.swing.JMenu();
         menuMegnyit = new javax.swing.JMenuItem();
@@ -125,7 +126,7 @@ public class muveletek extends javax.swing.JFrame {
                     .addComponent(txtKivonasKerd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtSzorzasKerd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtOsztasKerd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtOsszeadProba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtOsszProba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -179,7 +180,6 @@ public class muveletek extends javax.swing.JFrame {
         jLabel15.setText("Gyakorlás");
 
         txtFeladat.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        txtFeladat.setText("5 + 12 =");
 
         btnEllenorzes.setText("Ellenőrzés");
         btnEllenorzes.addActionListener(new java.awt.event.ActionListener() {
@@ -188,6 +188,8 @@ public class muveletek extends javax.swing.JFrame {
             }
         });
 
+        txtStart.setText("Kezdéshez: Műveletek (Válassz) és Új kérdés gomb!");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -195,7 +197,10 @@ public class muveletek extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtStart))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(txtValasz))
@@ -205,14 +210,19 @@ public class muveletek extends javax.swing.JFrame {
                         .addComponent(eredmeny, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnEllenorzes)))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel15)
-                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtStart)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFeladat)
                     .addComponent(eredmeny, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -269,7 +279,7 @@ public class muveletek extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(91, 91, 91)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnUjKerdes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMegoldas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -299,6 +309,7 @@ int megoldas=0;
             megoldas=(6/3);
             btnEllenorzes.setEnabled(true);
             eredmeny.setEnabled(true);
+            txtStart.setText("");
         }
     }//GEN-LAST:event_btnUjKerdesActionPerformed
 
@@ -387,6 +398,7 @@ int megoldas=0;
     private javax.swing.JLabel txtOsszeadProba;
     private javax.swing.JLabel txtOsztasKerd;
     private javax.swing.JLabel txtOsztasProba;
+    private javax.swing.JLabel txtStart;
     private javax.swing.JLabel txtSzorzasKerd;
     private javax.swing.JLabel txtSzorzasProba;
     private javax.swing.JLabel txtValasz;

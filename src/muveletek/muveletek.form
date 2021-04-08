@@ -99,10 +99,10 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Component id="jPanel2" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnUjKerdes" max="32767" attributes="0"/>
                           <Component id="btnMegoldas" max="32767" attributes="0"/>
@@ -170,7 +170,7 @@
                       <Component id="txtSzorzasKerd" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtOsztasKerd" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="100" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="txtOsszeadProba" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtOsszProba" alignment="0" max="32767" attributes="0"/>
@@ -315,7 +315,11 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel15" alignment="0" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel15" min="-2" pref="61" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txtStart" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
                           <Component id="txtValasz" min="-2" max="-2" attributes="0"/>
@@ -328,7 +332,7 @@
                           <Component id="btnEllenorzes" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -336,8 +340,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="txtStart" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtFeladat" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="eredmeny" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -364,7 +376,6 @@
         <Component class="javax.swing.JLabel" name="txtFeladat">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="5 + 12 ="/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="eredmeny">
@@ -376,6 +387,11 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEllenorzesActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txtStart">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Kezd&#xe9;shez: M&#x171;veletek (V&#xe1;lassz) &#xe9;s &#xda;j k&#xe9;rd&#xe9;s gomb!"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
