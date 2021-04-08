@@ -297,6 +297,7 @@ int megoldas=0;
         if (menuOsztas.isSelected()){
             txtFeladat.setText("6 : 3 =");
             megoldas=(6/3);
+            btnEllenorzes.setEnabled(true);
             eredmeny.setEnabled(true);
         }
     }//GEN-LAST:event_btnUjKerdesActionPerformed
@@ -304,15 +305,19 @@ int megoldas=0;
     private void btnEllenorzesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEllenorzesActionPerformed
         int eredmenyint=Integer.parseInt(eredmeny.getText()); 
         if (megoldas==eredmenyint){
-            txtValasz.setText("Helyes válasz!");
+            txtValasz.setText(eredmenyint + " - Helyes válasz!");
+            btnEllenorzes.setEnabled(false);
+            eredmeny.setEnabled(false);
         }
         else {
-            txtValasz.setText("Rossz válasz!");
+            txtValasz.setText(eredmenyint + " - Rossz válasz!");
+            eredmeny.setText("");
         }
     }//GEN-LAST:event_btnEllenorzesActionPerformed
 
     private void btnMegoldasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMegoldasActionPerformed
         txtValasz.setText(megoldas + " volt a helyes válasz!");
+        btnEllenorzes.setEnabled(false);
         eredmeny.setEnabled(false);
     }//GEN-LAST:event_btnMegoldasActionPerformed
 
